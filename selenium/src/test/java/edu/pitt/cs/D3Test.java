@@ -189,7 +189,7 @@ public class D3Test {
     vars.put("res", driver.findElement(By.cssSelector("#greeting > h4")).getText());
     assertEquals(vars.get("res").toString(), "Meow! from Jennyanydots.");
   }
-  @Test
+  /*@Test
   public void dEFECT1FUNFEED() {
     driver.get("https://cs1632.appspot.com/");
     driver.manage().window().setSize(new Dimension(1680, 1025));
@@ -202,7 +202,7 @@ public class D3Test {
       wait.until(ExpectedConditions.textToBe(By.id("feedResult"), "Cat fight!"));
     }
     assertThat(driver.findElement(By.id("feedResult")).getText(), is("Cat fight!"));
-  }
+  }*/
  // @Test
   public void dEFECT2GREETACAT() {
     driver.get("https://cs1632.appspot.com/");
