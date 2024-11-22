@@ -31,10 +31,12 @@ public class D3Test {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
+  
   @Before
   public void setUp() {
     ChromeOptions options = new ChromeOptions();
     options.addArguments("--headless");
+
     
     driver = new ChromeDriver(options);
 
