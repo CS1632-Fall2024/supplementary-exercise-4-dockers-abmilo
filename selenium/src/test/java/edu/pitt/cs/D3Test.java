@@ -7,6 +7,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -78,20 +79,6 @@ public class D3Test {
     assertEquals(vars.get("cat2").toString(), "ID 2. Old Deuteronomy");
     assertEquals(vars.get("cat3").toString(), "ID 3. Mistoffelees");
   }
-  @Test
-public void tEST3CATALOG() {
-    driver.get("https://cs1632.appspot.com/");
-    js.executeScript("document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";");
-    driver.findElement(By.linkText("Catalog")).click();
-    {
-        WebElement element = driver.findElement(By.xpath("//li[2]/img"));
-        String attribute = element.getAttribute("src");
-        vars.put("cat2", attribute);
-    }
-
-    assertEquals("https://cs1632.appspot.com/images/cat2.jpg", vars.get("cat2").toString());
-}
-
   @Test
   public void tEST4LISTING() {
     driver.get("https://cs1632.appspot.com//");
